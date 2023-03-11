@@ -5,10 +5,13 @@ import datetime
 
 # Menü listesini txt'den okur.
 def read_menu_list():
-    with open('Menu.txt', 'r') as menu_file:
-        print(menu_file.read())
-
-
+    try:
+        with open('Menu.txt', 'r') as menu_file:
+            print(menu_file.read())
+        except:
+            print("Menu.txt dosyası bulunamadı, dosyanın bulunduğu konumu kontrol edip tekrar deneyiniz. ")
+            exit()
+            
 # read_menu_list'i çağıraram menüyü yazdırır.
 def main():
     read_menu_list()
