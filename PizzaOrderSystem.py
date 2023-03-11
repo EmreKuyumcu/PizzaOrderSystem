@@ -8,9 +8,9 @@ def read_menu_list():
     try:
         with open('Menu.txt', 'r') as menu_file:
             print(menu_file.read())
-        except:
-            print("Menu.txt dosyası bulunamadı, dosyanın bulunduğu konumu kontrol edip tekrar deneyiniz. ")
-            exit()
+    except:
+        print("Menu.txt dosyası bulunamadı, dosyanın bulunduğu konumu kontrol edip tekrar deneyiniz. ")
+        exit()
             
 # read_menu_list'i çağıraram menüyü yazdırır.
 def main():
